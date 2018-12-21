@@ -48,12 +48,9 @@ export default {
   methods: {
     searchBreeds(){
       this.filteredBreeds = this.breeds.filter(breed => {
-        if (breed.breedName.includes("")){
-          let breedName = breed.breedName.replace(/"/g,"");
-          return breedName.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
-        } else {
-          return breed.breedName.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
-        }
+        let breedName = breed.breedName;
+
+        return breedName.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
       })
       return this.filteredBreeds;
     }
@@ -65,7 +62,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
 
   .container {
-    height: 200px;
+    height: 270px;
     width: 66%;
     .search-container {
       width: 100%;
@@ -90,6 +87,7 @@ export default {
     .dropdown {
       display: flex;
       width: 100%;
+      max-height: 100%;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
       box-shadow: 0 4px 2px -2px gray;
@@ -111,6 +109,7 @@ export default {
           padding-left: 10px;
           font-family: 'Raleway', sans-serif;
           font-weight: 300;
+          font-size: 20px;
         }
       }
     }
