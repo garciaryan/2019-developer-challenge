@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name:  'Autosuggest',
+  name: 'Autosuggest',
 
   data(){
     return {
@@ -64,6 +64,7 @@ export default {
   .container {
     height: 270px;
     width: 66%;
+    
     .search-container {
       width: 100%;
 
