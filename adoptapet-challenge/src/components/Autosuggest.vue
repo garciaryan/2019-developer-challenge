@@ -11,7 +11,6 @@
           @focusout="isActive = false"
           @keyup="searchBreeds()"
       />
-
     </div>
     <div v-if="isActive" class="dropdown">
       <div class="results-container" 
@@ -64,7 +63,7 @@ export default {
   .container {
     height: 270px;
     width: 66%;
-    
+
     .search-container {
       width: 100%;
 
